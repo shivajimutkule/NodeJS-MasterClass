@@ -131,3 +131,44 @@ Response:
     }
 ]
 ```
+
+## Shopping cart APIs
+
+#### 1. Add menu items to cart
+POST/PUT http://localhost:3000/cart
+```
+{   
+    "email": "abc@gmail.com",
+    "menuitem": {
+            "id": "item1",
+            "quantity": 1
+        }
+}
+```
+
+#### 1. Get menu items from cart
+GET http://localhost:3000/cart?email=abc@gmail.com
+```
+[
+    {
+        "id": "item1",
+        "name": "Farm House",
+        "description": "A pizza that goes ballistic on veggies!",
+        "type": "VEG",
+        "price": "350",
+        "quantity": 2
+    }
+]
+```
+
+#### 1. Remove menu item from cart
+DELETE http://localhost:3000/cart
+```
+{   
+    "email": "abc@gmail.com",
+    "menuitem": {
+            "id": "item1",
+            "qauntity": 1
+        }
+}
+```
