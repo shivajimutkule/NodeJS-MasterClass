@@ -1,8 +1,8 @@
-Homework Assignment #2
+# Homework Assignment #2
 
 This is the second of several homework assignments you'll receive in this course. In order to receive your certificate of completion (at the end of this course) you must complete all the assignments and receive a passing grade. 
 
-How to Turn It In:
+### How to Turn It In:
 
 1. Create a public github repo for this assignment. 
 
@@ -10,7 +10,7 @@ How to Turn It In:
 
 3. In that thread, discuss what you have built, and include the link to your Github repo. 
 
-The Assignment (Scenario):
+### The Assignment (Scenario):
 
 You are building the API for a pizza-delivery company. Don't worry about a frontend, just build the API. Here's the spec from your project manager: 
 
@@ -26,57 +26,68 @@ You are building the API for a pizza-delivery company. Don't worry about a front
 
 6. When an order is placed, you should email the user a receipt. You should integrate with the sandbox of Mailgun.com for this. Note: Every Mailgun account comes with a sandbox email account domain (whatever@sandbox123.mailgun.org) that you can send from by default. So, there's no need to setup any DNS for your domain for this task https://documentation.mailgun.com/en/latest/faqs.html#how-do-i-pick-a-domain-name-for-my-mailgun-account
 
-Important Note: If you use external libraries (NPM) to integrate with Stripe or Mailgun, you will not pass this assignment. You must write your API calls from scratch. Look up the "Curl" documentation for both APIs so you can figure out how to craft your API calls. 
+### Important Note: 
+If you use external libraries (NPM) to integrate with Stripe or Mailgun, you will not pass this assignment. You must write your API calls from scratch. Look up the "Curl" documentation for both APIs so you can figure out how to craft your API calls. 
 
 This is an open-ended assignment. You may take any direction you'd like to go with it, as long as your project includes the requirements. It can include anything else you wish as well. 
 
 And please: Don't forget to document how a client should interact with the API you create!
 
 
-API Documentation:
-User APIs:
+# API Documentation:
+
+## User APIs:
+
 Use authentication token in header before accessing users APIs
 
-1. Add New User
+#### 1. Add New User
 POST http://localhost:3000/users
+```
 {
   "fullName": "John J",
   "email": "abc@gmail.com",
   "address": "abc road",
   "password": "abc"
 }
+```
 
-2. Get User by email
+#### 2. Get User by email
 GET http://localhost:3000/users?email=abc@gmail.com
 
-3. update user 
+#### 3. update user 
 PUT http://localhost:3000/users
+```
 {
   "fullName": "John Jaccob",
   "email": "abc@gmail.com"
 }
+```
 
-4. delete user
+#### 4. delete user
 DELETE http://localhost:3000/users?email=abc@gmail.com
 
 
-Token APIs:
-1. Create new token
+## Token APIs:
+#### 1. Create new token
 POST http://localhost:3000/tokens
+```
 {
   "email": "abc@gmail.com",
   "password": "abc"
 }
+```
 
-2. Get token by id
+#### 2. Get token by id
 GET http://localhost:3000/tokens?id=w6hmts7okwqkt46m3k7l
 
-3. update token 
+#### 3. update token 
 PUT http://localhost:3000/users
+```
 {
   "id": "w6hmts7okwqkt46m3k7l",
   "extend": true
 }
+```
 
-4. delete token
+#### 4. delete token
 DELETE http://localhost:3000/tokens?id=w6hmts7okwqkt46m3k7l
