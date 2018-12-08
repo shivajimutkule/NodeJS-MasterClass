@@ -91,3 +91,43 @@ PUT http://localhost:3000/users
 
 #### 4. delete token
 DELETE http://localhost:3000/tokens?id=w6hmts7okwqkt46m3k7l
+
+
+## Menu Card
+
+#### 1. Get Menu Card
+GET http://localhost:3000/menu?email=abc@gmail.com
+
+Response:
+```
+[
+    {
+        "id": "item1",
+        "name": "Farm House",
+        "description": "A pizza that goes ballistic on veggies!",
+        "type": "VEG",
+        "price": "350"
+    },
+    {
+        "id": "item2",
+        "name": "Peppy Paneer",
+        "description": "Chunky paneer with crisp capsicum and spicy red pepper",
+        "type": "VEG",
+        "price": "450"
+    },
+    {
+        "id": "item3",
+        "name": "CHICKEN TIKKA",
+        "description": "Chicken Tikka I Onion on Makhani Sauce",
+        "type": "NON VEG",
+        "price": "500"
+    },
+    {
+        "id": "item4",
+        "name": "Non Veg Supreme",
+        "description": "Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms",
+        "type": "NON VEG",
+        "price": "550"
+    }
+]
+```

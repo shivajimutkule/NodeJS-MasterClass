@@ -1,0 +1,25 @@
+[{
+    "id": "item1",
+    "name": "Farm House",
+    "description": "A pizza that goes ballistic on veggies! Check out this mouth watering overload of crunchy, crisp capsicum, succulent mushrooms and fresh tomatoes",
+    "type": "VEG",
+    "price": "350"
+},{
+    "id": "item2",
+    "name": "Peppy Paneer",
+    "description": "Chunky paneer with crisp capsicum and spicy red pepper - quite a mouthful!",
+    "type": "VEG",
+    "price": "450"
+},{
+    "id": "item3",
+    "name": "CHICKEN TIKKA",
+    "description": "Chicken Tikka I Onion on Makhani Sauce",
+    "type": "NON VEG",
+    "price": "500"
+},{
+    "id": "item4",
+    "name": "Non Veg Supreme",
+    "description": "Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers",
+    "type": "NON VEG",
+    "price": "550"
+}]

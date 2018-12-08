@@ -3,6 +3,7 @@ var url = require("url");
 var strDecoder = require("string_decoder").StringDecoder;
 var userHandler = require("./collections/users");
 var tokenHandler = require("./collections/tokens");
+var menuHandler = require("./collections/menu");
 
 var config = require("./config");
 
@@ -72,5 +73,6 @@ handlers.notFoundHandler = function (data, callback) {
 var router = {
     "hello": handlers.helloHandler,
     "users": userHandler.users,
-    "tokens": tokenHandler.tokens
+    "tokens": tokenHandler.tokens,
+    "menu": menuHandler.menu
 };
