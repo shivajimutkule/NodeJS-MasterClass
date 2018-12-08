@@ -60,7 +60,6 @@ handlers._menu.getSingleItem = function (id, callback) {
         // Lookup menucard
         _data.read('menu', "menucard", function (err, data) {
             if (!err && data) {
-                data = JSON.parse(data);
 
                 for (var i = 0; i < data.length; i++) {
                     if (data[i].id == id) {

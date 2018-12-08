@@ -93,6 +93,7 @@ handlers._users.get = function (data, callback) {
                     if (!err && data) {
                         // Remove the hashed password
                         delete data.hashedPassword;
+                        delete data.cart;
                         callback(200, data);
                     } else {
                         callback(404);

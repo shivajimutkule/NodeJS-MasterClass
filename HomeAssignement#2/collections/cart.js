@@ -2,6 +2,7 @@
 var _data = require('./../library/file_operation');
 var helpers = require('./../library/util');
 var tokenHandler = require('./tokens');
+var menuHandler = require("./menu");
 
 var handlers = {};
 
@@ -41,7 +42,30 @@ handlers._cart.get = function (data, callback) {
                     if (!err && data) {
                         // Remove the hashed password
                         delete data.hashedPassword;
-                        callback(200, data);
+
+                        if(data.cart && data.cart.length > 0) {
+                            var count = 0;
+                            for(var i=0; i< data.cart.length;i++){
+                                (function(item){
+                                    menuHandler._menu.getSingleItem(item.id, function(code, menuItem){
+                                        count ++;
+                                        if(code == 200) {
+                                            item.name = menuItem.name;
+                                            item.description = menuItem.description;
+                                            item.type = menuItem.type;
+                                            item.price = menuItem.price;
+                                            item.total = item.price * item.quantity;
+                                        }
+                                        if(count == data.cart.length){
+                                            callback(200, data);
+                                        }
+                                    });
+                                })(data.cart[i]);
+                            }
+                            
+                        } else {
+                            callback(200, data);
+                        }
                     } else {
                         callback(404);
                     }

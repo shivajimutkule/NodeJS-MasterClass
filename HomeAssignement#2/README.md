@@ -155,8 +155,9 @@ GET http://localhost:3000/cart?email=abc@gmail.com
         "name": "Farm House",
         "description": "A pizza that goes ballistic on veggies!",
         "type": "VEG",
-        "price": "350",
-        "quantity": 2
+        "price": 350,
+        "quantity": 2,
+        "total": 700
     }
 ]
 ```
